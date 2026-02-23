@@ -1,0 +1,16 @@
+{
+  "disclosing_party_name": "Acme Corporation",
+  "disclosing_party_address": "123 Innovation Drive, Suite 100, San Francisco, CA 94105",
+  "disclosing_party_signer_name": "Jane Smith",
+  "disclosing_party_signer_title": "General Counsel",
+  "receiving_party_name": "Globex Industries, Inc.",
+  "receiving_party_address": "456 Enterprise Blvd, Floor 20, New York, NY 10001",
+  "receiving_party_signer_name": "John Doe",
+  "receiving_party_signer_title": "Chief Operating Officer",
+  "effective_date": "2026-03-01",
+  "term_years": 2,
+  "survival_years": 2,
+  "purpose": "evaluating a potential business relationship between the parties",
+  "jurisdiction_id": 5,
+  "notes": "Initial NDA for vendor evaluation"
+}

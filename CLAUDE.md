@@ -47,7 +47,7 @@ nda-generator/
 
 - **No real data.** All sample data must be synthetic. Never commit real company names, client data, or internal policies.
 - **Generic framework.** Keep the public codebase company-agnostic. Company-specific config stays out of the repo.
-- **MIT License.**
+- **MIT License.** The copyright line in the LICENSE file must read: `Copyright (c) 2026 Noam Raz and Pleasant Secret Labs`.
 - **SQLite for now.** Use SQLAlchemy so the DB layer is swappable to PostgreSQL later.
 - **Templates are .docx files** with Jinja2 placeholders processed by docxtpl.
 

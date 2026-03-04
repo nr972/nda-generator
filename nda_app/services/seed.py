@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
 
-from app.models.nda import Jurisdiction
+from nda_app.models.nda import Jurisdiction
 
 PRESET_JURISDICTIONS = [
     {"country": "Australia", "subdivision": None, "display_name": "Australia", "usage_count": 0},

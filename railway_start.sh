@@ -8,7 +8,7 @@ set -e
 mkdir -p data/generated
 
 # Start API server in background
-uvicorn app.main:app --host 0.0.0.0 --port "${API_PORT:-8000}" &
+uvicorn nda_app.main:app --host 0.0.0.0 --port "${API_PORT:-8000}" &
 
 # Wait for API to be ready
 for i in $(seq 1 30); do
@@ -19,7 +19,7 @@ for i in $(seq 1 30); do
 done
 
 # Start Streamlit frontend (foreground — Railway monitors this process)
-exec streamlit run frontend/app.py \
+exec streamlit run nda_frontend/app.py \
     --server.port "${PORT:-8501}" \
     --server.address 0.0.0.0 \
     --server.headless true \

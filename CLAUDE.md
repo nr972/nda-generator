@@ -17,14 +17,14 @@ Self-service NDA generation tool for in-house legal teams. Users fill a web form
 
 ```
 nda-generator/
-├── app/                  # FastAPI backend
+├── nda_app/              # FastAPI backend
 │   ├── api/              # API route handlers
 │   ├── models/           # SQLAlchemy models
 │   ├── schemas/          # Pydantic schemas
 │   ├── services/         # Business logic (generation, tracking)
 │   ├── templates/        # NDA .docx templates
 │   └── config.py         # App configuration
-├── frontend/             # Streamlit app
+├── nda_frontend/         # Streamlit app
 ├── data/
 │   └── sample/           # Sample/synthetic data for testing
 ├── tests/                # pytest tests
@@ -58,10 +58,10 @@ nda-generator/
 pip install -e ".[dev]"
 
 # Run FastAPI backend
-uvicorn app.main:app --reload
+uvicorn nda_app.main:app --reload
 
 # Run Streamlit frontend
-streamlit run frontend/app.py
+streamlit run nda_frontend/app.py
 
 # Run tests
 pytest

@@ -4,9 +4,9 @@ from pathlib import Path
 from docxtpl import DocxTemplate
 from sqlalchemy.orm import Session
 
-from app.config import settings
-from app.models.nda import Jurisdiction, NDA
-from app.schemas.nda import NDACreate
+from nda_app.config import settings
+from nda_app.models.nda import Jurisdiction, NDA
+from nda_app.schemas.nda import NDACreate
 
 
 def _build_context(nda_data: NDACreate, jurisdiction: Jurisdiction | None) -> dict:

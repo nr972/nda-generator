@@ -4,7 +4,7 @@ from datetime import UTC, date, datetime
 from sqlalchemy import Boolean, Date, DateTime, Enum, ForeignKey, Integer, String, Text
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
-from app.database import Base
+from nda_app.database import Base
 
 
 class NDAStatus(str, enum.Enum):

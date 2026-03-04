@@ -11,4 +11,4 @@ RUN mkdir -p data/generated
 
 EXPOSE 8000
 
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "nda_app.main:app", "--host", "0.0.0.0", "--port", "8000"]

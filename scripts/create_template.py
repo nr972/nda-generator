@@ -1,6 +1,6 @@
 """Script to create the mutual NDA .docx template with Jinja2 placeholders.
 
-Run this once to generate app/templates/mutual_nda.docx.
+Run this once to generate nda_app/templates/mutual_nda.docx.
 Uses python-docx for proper formatting, then docxtpl renders the placeholders.
 """
 
@@ -336,7 +336,7 @@ def create_template():
     )
 
     # Save template
-    output_path = Path(__file__).resolve().parent.parent / "app" / "templates" / "mutual_nda.docx"
+    output_path = Path(__file__).resolve().parent.parent / "nda_app" / "templates" / "mutual_nda.docx"
     output_path.parent.mkdir(parents=True, exist_ok=True)
     doc.save(str(output_path))
     print(f"Template created at: {output_path}")

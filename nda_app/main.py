@@ -3,10 +3,10 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.api.routes import jurisdictions, ndas
-from app.config import settings
-from app.database import Base, SessionLocal, engine
-from app.models.nda import NDA, Jurisdiction  # noqa: F401 — register models with Base
+from nda_app.api.routes import jurisdictions, ndas
+from nda_app.config import settings
+from nda_app.database import Base, SessionLocal, engine
+from nda_app.models.nda import NDA, Jurisdiction  # noqa: F401 — register models with Base
 
 
 @asynccontextmanager
@@ -14,7 +14,7 @@ async def lifespan(app: FastAPI):
     Base.metadata.create_all(bind=engine)
     settings.output_dir.mkdir(parents=True, exist_ok=True)
     # Seed preset jurisdictions
-    from app.services.seed import seed_jurisdictions
+    from nda_app.services.seed import seed_jurisdictions
 
     db = SessionLocal()
     try:

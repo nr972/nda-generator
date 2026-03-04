@@ -30,7 +30,7 @@ dev = [
 ]
 
 [tool.setuptools.packages.find]
-include = ["app*"]
+include = ["nda_app*", "nda_frontend*"]
 
 [tool.ruff]
 target-version = "py311"

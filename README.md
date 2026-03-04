@@ -98,7 +98,7 @@ See `data/sample/sample_request.json` for a full example request payload.
 
 ```
 nda-generator/
-├── app/
+├── nda_app/
 │   ├── api/routes/       # FastAPI route handlers
 │   ├── models/           # SQLAlchemy models
 │   ├── schemas/          # Pydantic validation schemas
@@ -107,7 +107,7 @@ nda-generator/
 │   ├── config.py         # App configuration
 │   ├── database.py       # Database setup
 │   └── main.py           # FastAPI app entry point
-├── frontend/             # Streamlit web UI
+├── nda_frontend/         # Streamlit web UI
 ├── tests/                # pytest test suite
 ├── data/sample/          # Sample data for testing
 ├── start.sh / start.bat  # One-command startup scripts

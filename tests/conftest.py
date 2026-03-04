@@ -2,10 +2,10 @@ import pytest
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-from app.database import Base, get_db
-from app.main import app
-from app.models.nda import NDA, Jurisdiction  # noqa: F401 — register models
-from app.services.seed import seed_jurisdictions
+from nda_app.database import Base, get_db
+from nda_app.main import app
+from nda_app.models.nda import NDA, Jurisdiction  # noqa: F401 — register models
+from nda_app.services.seed import seed_jurisdictions
 from fastapi.testclient import TestClient
 
 engine = create_engine(

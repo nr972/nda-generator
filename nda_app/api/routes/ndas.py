@@ -4,12 +4,12 @@ from fastapi import APIRouter, Depends, HTTPException, Query
 from fastapi.responses import FileResponse
 from sqlalchemy.orm import Session
 
-from app.config import settings
-from app.database import get_db
-from app.models.nda import NDAStatus
-from app.schemas.nda import NDACreate, NDAListResponse, NDAResponse, NDAUpdate
-from app.services.generator import generate_nda
-from app.services.tracker import delete_nda, get_nda, list_ndas, update_nda
+from nda_app.config import settings
+from nda_app.database import get_db
+from nda_app.models.nda import NDAStatus
+from nda_app.schemas.nda import NDACreate, NDAListResponse, NDAResponse, NDAUpdate
+from nda_app.services.generator import generate_nda
+from nda_app.services.tracker import delete_nda, get_nda, list_ndas, update_nda
 
 router = APIRouter()
 

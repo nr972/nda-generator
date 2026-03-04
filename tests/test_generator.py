@@ -1,12 +1,12 @@
 from datetime import date
 
-from app.schemas.nda import NDACreate
-from app.services.generator import generate_nda
+from nda_app.schemas.nda import NDACreate
+from nda_app.services.generator import generate_nda
 
 
 def test_generate_nda_creates_file_and_record(db, tmp_path, monkeypatch):
     """Test that generate_nda creates a .docx file and a database record."""
-    from app import config
+    from nda_app import config
 
     monkeypatch.setattr(config.settings, "output_dir", tmp_path)
 
@@ -35,7 +35,7 @@ def test_generate_nda_creates_file_and_record(db, tmp_path, monkeypatch):
 
 def test_generate_nda_without_jurisdiction(db, tmp_path, monkeypatch):
     """Test that an NDA can be generated without selecting a jurisdiction."""
-    from app import config
+    from nda_app import config
 
     monkeypatch.setattr(config.settings, "output_dir", tmp_path)
 
@@ -52,8 +52,8 @@ def test_generate_nda_without_jurisdiction(db, tmp_path, monkeypatch):
 
 def test_generate_nda_increments_jurisdiction_usage(db, tmp_path, monkeypatch):
     """Test that generating an NDA increments the jurisdiction usage count."""
-    from app import config
-    from app.models.nda import Jurisdiction
+    from nda_app import config
+    from nda_app.models.nda import Jurisdiction
 
     monkeypatch.setattr(config.settings, "output_dir", tmp_path)
 

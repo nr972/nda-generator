@@ -1,8 +1,8 @@
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
-from app.models.nda import NDA, NDAStatus
-from app.schemas.nda import NDAUpdate
+from nda_app.models.nda import NDA, NDAStatus
+from nda_app.schemas.nda import NDAUpdate
 
 
 def get_nda(db: Session, nda_id: int) -> NDA | None:

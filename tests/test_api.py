@@ -42,7 +42,7 @@ def test_create_duplicate_jurisdiction_returns_409(client):
 
 
 def test_create_nda(client, tmp_path, monkeypatch):
-    from app import config
+    from nda_app import config
 
     monkeypatch.setattr(config.settings, "output_dir", tmp_path)
 
@@ -64,7 +64,7 @@ def test_create_nda(client, tmp_path, monkeypatch):
 
 
 def test_list_ndas(client, tmp_path, monkeypatch):
-    from app import config
+    from nda_app import config
 
     monkeypatch.setattr(config.settings, "output_dir", tmp_path)
 
@@ -86,7 +86,7 @@ def test_list_ndas(client, tmp_path, monkeypatch):
 
 
 def test_update_nda_status(client, tmp_path, monkeypatch):
-    from app import config
+    from nda_app import config
 
     monkeypatch.setattr(config.settings, "output_dir", tmp_path)
 
@@ -106,7 +106,7 @@ def test_update_nda_status(client, tmp_path, monkeypatch):
 
 
 def test_download_nda(client, tmp_path, monkeypatch):
-    from app import config
+    from nda_app import config
 
     monkeypatch.setattr(config.settings, "output_dir", tmp_path)
 
@@ -126,7 +126,7 @@ def test_download_nda(client, tmp_path, monkeypatch):
 
 
 def test_delete_nda(client, tmp_path, monkeypatch):
-    from app import config
+    from nda_app import config
 
     monkeypatch.setattr(config.settings, "output_dir", tmp_path)
 
@@ -153,7 +153,7 @@ def test_get_nonexistent_nda_returns_404(client):
 
 
 def test_filter_ndas_by_status(client, tmp_path, monkeypatch):
-    from app import config
+    from nda_app import config
 
     monkeypatch.setattr(config.settings, "output_dir", tmp_path)
 

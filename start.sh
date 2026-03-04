@@ -46,7 +46,7 @@ mkdir -p data/generated
 
 # Start API server in background
 echo "Starting API server on port $API_PORT..."
-"$PYTHON" -m uvicorn app.main:app --host 127.0.0.1 --port "$API_PORT" &
+"$PYTHON" -m uvicorn nda_app.main:app --host 127.0.0.1 --port "$API_PORT" &
 API_PID=$!
 
 # Wait for API to be ready
@@ -74,7 +74,7 @@ echo "  Press Ctrl+C to stop"
 echo "============================================"
 echo ""
 
-"$PYTHON" -m streamlit run frontend/app.py \
+"$PYTHON" -m streamlit run nda_frontend/app.py \
     --server.port "$FRONTEND_PORT" \
     --server.address 127.0.0.1 \
     --server.headless false &

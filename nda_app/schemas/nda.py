@@ -2,7 +2,7 @@ from datetime import date, datetime
 
 from pydantic import BaseModel, Field
 
-from app.models.nda import NDAStatus, NDAType
+from nda_app.models.nda import NDAStatus, NDAType
 
 
 # --- Jurisdiction schemas ---

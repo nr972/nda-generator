@@ -29,7 +29,7 @@ if not exist data\generated mkdir data\generated
 
 REM Start API server in background
 echo Starting API server on port %API_PORT%...
-start /b python -m uvicorn app.main:app --host 127.0.0.1 --port %API_PORT%
+start /b python -m uvicorn nda_app.main:app --host 127.0.0.1 --port %API_PORT%
 
 REM Wait for API to be ready
 echo Waiting for API...
@@ -55,4 +55,4 @@ echo   Close this window to stop
 echo ============================================
 echo.
 
-python -m streamlit run frontend/app.py --server.port %FRONTEND_PORT% --server.address 127.0.0.1
+python -m streamlit run nda_frontend/app.py --server.port %FRONTEND_PORT% --server.address 127.0.0.1
